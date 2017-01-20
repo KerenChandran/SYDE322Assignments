@@ -12,25 +12,71 @@
         }
       }
 
-      function changeStyle1() {
-        // change text style to these specific properties
-        var element = document.getElementById("test");
-        element.style.fontSize = "60px";
-        element.style.fontFamily = "cursive";
-        element.style.color = "red";
+      function chandler() {
+        document.open("text/html", "replace");
+        document.write('<!DOCTYPE html><html><body>');
+        document.write('<h2 id="test2" style="color:blue"> \
+          My Favourite Chandler Moments!</h2>');
+        document.write('<iframe width="560" height="315" src="https://www.youtube.com/embed/WWJPooLjasA?autoplay=1" frameborder="0" allowfullscreen></iframe>');
+        document.write('<p><input type="button" \
+          value="Go Back" onclick="location.reload()"></p>');
+        document.write('</body></html>');
+        document.close();
+      }
+
+      function phoebe() {
+        document.open("text/html", "replace");
+        document.write('<!DOCTYPE html><html><body>');
+        document.write('<h2 id="test2" style="color:blue"> \
+          My Favourite Phoebe Moments!</h2>');
+        document.write('<iframe width="560" height="315" src="https://www.youtube.com/embed/YozszzDvY0k?autoplay=1" frameborder="0" allowfullscreen></iframe>');
+        document.write('<p><input type="button" \
+          value="Go Back" onclick="location.reload()"></p>');
+        document.write('</body></html>');
+        document.close();
+      }
+
+      function joey() {
+        document.open("text/html", "replace");
+        document.write('<!DOCTYPE html><html><body>');
+        document.write('<h2 id="test2" style="color:blue"> \
+          My Favourite Joey Moments!</h2>');
+        document.write('<iframe width="560" height="315" src="https://www.youtube.com/embed/FuymvEZ1pkU?autoplay=1" frameborder="0" allowfullscreen></iframe>');
+        document.write('<p><input type="button" \
+          value="Go Back" onclick="location.reload()"></p>');
+        document.write('</body></html>');
+        document.close();
+      }
+
+      function randomVideo() {
+        document.open();
+        var videos = ["https://www.youtube.com/embed/9bZkp7q19f0", "https://www.youtube.com/embed/dQw4w9WgXcQ"];
+        window.onload = function () {
+            var playerDiv = document.getElementById("random_player");
+            var player = document.createElement("IFRAME");
+            var randomVideoUrl = videos[Math.floor(Math.random() * videos.length)];
+            player.setAttribute('width', '640');
+            player.setAttribute('height', '390');
+            player.setAttribute('src', randomVideoUrl);
+            playerDiv.appendChild(player);
+        };
       }
 
       function writeText() { // generate a new page
-        document.open();
+        document.open("text/html", "replace");
         document.write('<!DOCTYPE html><html><body>');
         document.write('<h2 id="test2" style="color:blue"> \
           My first fully-generated HTML page!</h2>');
+        document.write('<h2 id="video"');
         document.write('<p><input type="button" \
           value="Go Back" onclick="window.history.back()"></p>');
         document.write('</body></html>');
         document.close();
       }
     </script>
+    <link type="text/css" rel="stylesheet" href="js-page1-style1.css" />
+    <link type="text/css" rel="stylesheet" href="js-page1-style2.css" />
+    <link type="text/css" rel="stylesheet" href="js-page1-style3.css" />
   </header>
   <body>
     <h1 id="test" onclick="changeText()">My SYDE 322 test script</h1>
@@ -38,9 +84,11 @@
       // the following gets executed immediately
       document.getElementById("test").innerHTML = "Hello World!";
     </script>
-    <p><input type="button" value="Best of Chandler" onclick="openChandler()"></p>
-    <p><input type="button" value="Best of Phoebe" onclick=""></p>
-    <p><input type="button" value="Best of Joey" onclick=""></p>
-    <p><input type="button" value="Generate New Page" onclick="writeText()"></p>
+    <p>
+      <input type="button" value="Best of Chandler" onclick="chandler()">
+      <input type="button" value="Best of Phoebe" onclick="phoebe()">
+      <input type="button" value="Best of Joey" onclick="joey()">
+      <input type="button" value="Random Video" onclick="randomVideo()">
+    </p>
   </body>
 </html>
