@@ -20,15 +20,58 @@
         element.style.color = "red";
       }
 
-      function writeText() { // generate a new page
+      function womboCombo() { // generate a new page
         document.open();
         document.write('<!DOCTYPE html><html><body>');
-        document.write('<h2 id="test2" style="color:blue"> \
-          My first fully-generated HTML page!</h2>');
+        document.write('<h2 id="test2" style="color:blue">Wombo Combo!</h2>');
+        document.write('<iframe width="560" height="315" \
+          src="https://www.youtube.com/embed/pD_imYhNoQ4?autoplay=1" \
+          frameborder="0" allowfullscreen></iframe>');
         document.write('<p><input type="button" \
           value="Go Back" onclick="location.reload()"></p>');
         document.write('</body></html>');
         document.close();
+      }
+
+      function nintendoSwitch() { // generate a new page
+        document.open();
+        document.write('<!DOCTYPE html><html><body>');
+        document.write('<h2 id="test2" style="color:#E60012"> \
+          First Look at Nintendo Switch</h2>');
+        document.write('<iframe width="560" height="315" \
+          src="https://www.youtube.com/embed/f5uik5fgIaI?autoplay=1" \
+          frameborder="0" allowfullscreen></iframe>');
+        document.write('<p><input type="button" \
+          value="Go Back" onclick="location.reload()"></p>');
+        document.write('</body></html>');
+        document.close();
+      }
+
+      function legendOfZelda() { // generate a new page
+        document.open();
+        document.write('<!DOCTYPE html><html><body>');
+        document.write('<h2 id="test2" style="color:black"> \
+          The Legend of Zelda: Breath of the Wild - \
+          Nintendo Switch Presentation 2017 Trailer</h2>');
+        document.write('<iframe width="560" height="315" \
+          src="https://www.youtube.com/embed/zw47_q9wbBE?autoplay=1" \
+          frameborder="0" allowfullscreen></iframe>');
+        document.write('<p><input type="button" \
+          value="Go Back" onclick="location.reload()"></p>');
+        document.write('</body></html>');
+        document.close();
+      }
+
+      function surpriseMe() {
+        var youtubeList = [
+         "https://www.youtube.com/watch?v=5kcdRBHM7kM&t=3s",
+         "https://www.youtube.com/watch?v=sJuiTw6nk7A",
+         "https://www.youtube.com/watch?v=w3VHcGif4jE",
+         "https://www.youtube.com/watch?v=WlNA6QfNqBA"
+        ]
+        var randomIndex = Math.floor(Math.random() * youtubeList.length)
+        var link = youtubeList[randomIndex]
+        window.open(link,"_blank")
       }
     </script>
   </header>
@@ -39,6 +82,11 @@
       document.getElementById("test").innerHTML = "Hello World!";
     </script>
     <p><input type="button" value="Style1" onclick="changeStyle1()"></p>
-    <p><input type="button" value="Generate New Page" onclick="writeText()"></p>
+    <p>
+      <input type="button" value="Wombo Combo" onclick="womboCombo()">
+      <input type="button" value="First Look at Nintendo Switch" onclick="nintendoSwitch()">
+      <input type="button" value="The Legend of Zelda: Breath of the Wild Trailer" onclick="legendOfZelda()">
+    </p>
+    <p><input type="button" value="Surprise Me!" onclick="surpriseMe()"></p>
   </body>
 </html>
