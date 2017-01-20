@@ -49,17 +49,9 @@
       }
 
       function randomVideo() {
-        document.open();
-        var videos = ["https://www.youtube.com/embed/9bZkp7q19f0", "https://www.youtube.com/embed/dQw4w9WgXcQ"];
-        window.onload = function () {
-            var playerDiv = document.getElementById("random_player");
-            var player = document.createElement("IFRAME");
-            var randomVideoUrl = videos[Math.floor(Math.random() * videos.length)];
-            player.setAttribute('width', '640');
-            player.setAttribute('height', '390');
-            player.setAttribute('src', randomVideoUrl);
-            playerDiv.appendChild(player);
-        };
+        var videos = ["https://www.youtube.com/watch?v=Uq_ePJ3taLc", "https://www.youtube.com/watch?v=ZBk6PyQiUmw", "https://www.youtube.com/watch?v=HVhli9AtJZ0", "https://www.youtube.com/watch?v=b2NLR7axPuE", "https://www.youtube.com/watch?v=TU4JpTCa0QQ"]
+        var randomVideo = videos[Math.floor(Math.random() * videos.length)]
+        window.open(randomVideo,"_blank")
       }
 
       function writeText() { // generate a new page
