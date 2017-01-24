@@ -1,0 +1,78 @@
+
+body {
+  background-color: black;
+  font-family:Helvetica;
+}
+
+#title {
+  color:white;
+}
+
+#frame {
+  width: 300px;
+  height: auto;
+  margin: 100px auto;
+  padding: 15px 15px 7px;
+  background: #cedbe9; /* Old browsers */
+  background: -moz-linear-gradient(-45deg,  #cedbe9 0%, #aac5de 17%, #6199c7 50%, #3a84c3 51%, #419ad6 59%, #4bb8f0 71%, #3a8bc2 84%, #26558b 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg,  #cedbe9 0%,#aac5de 17%,#6199c7 50%,#3a84c3 51%,#419ad6 59%,#4bb8f0 71%,#3a8bc2 84%,#26558b 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg,  #cedbe9 0%,#aac5de 17%,#6199c7 50%,#3a84c3 51%,#419ad6 59%,#4bb8f0 71%,#3a8bc2 84%,#26558b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cedbe9', endColorstr='#26558b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.topLine .screen {
+  height: 35px;
+  width: 190px;
+  float: left;
+  padding: 0 10px;
+  background: rgba(0, 0, 0, 0.2);
+  font-size: 17px;
+  line-height: 40px;
+  color: white;
+  text-align: right;
+  border-radius: 2px
+}
+
+.keys, .topLine {
+  overflow: hidden;
+}
+
+.keys span, .topLine span.clear {
+  float: left;
+  position: relative;
+  top: 0;
+  cursor: pointer;
+  width: 66px;
+  height: 36px;
+  background: white;
+  border-radius: 3px;
+  margin: 0 7px 11px 0;
+  color: grey;
+  line-height: 36px;
+  text-align: center;
+  user-select: none;
+}
+
+.keys span.operation {
+  background: #f2eb6a;
+  /*margin-right: 2px;*/
+  color:grey;
+  font-style: bold;
+}
+
+.keys span.eval {
+  background: #37d349;
+  color: white;
+  font-style: bold;
+}
+
+.topLine span.clear {
+  background: red;
+  color: white;
+}
+
+.keys span:hover , .keys span.eval:hover ,
+.topLine span.clear:hover  {
+  background: #a8a79f;
+  color: white;
+}

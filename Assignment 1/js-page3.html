@@ -2,92 +2,11 @@
 <html>
   <header>
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-    <link type="text/css" rel="stylesheet" href="js-page1-style1.css" />
-    <link type="text/css" rel="stylesheet" href="js-page1-style2.css" />
-    <link type="text/css" rel="stylesheet" href="js-page1-style3.css" />
+    <link type="text/css" rel="stylesheet" href="js-page3.css" />
   </header>
 
-  <style type="text/css">
-
-    body {
-      background-color: grey;
-      font-family:Helvetica;
-    }
-
-    #title {
-      color:white;
-    }
-
-    #frame {
-      width: 300px;
-      height: auto;
-      margin: 100px auto;
-      padding: 15px 15px 7px;
-      background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#1a82f7), to(#2F2727));
-    }
-
-    .topLine .screen {
-      height: 35px;
-      width: 190px;
-      float: left;
-      padding: 0 10px;
-      background: rgba(0, 0, 0, 0.2);
-      font-size: 17px;
-      line-height: 40px;
-      color: white;
-      text-align: right;
-      border-radius: 2px
-    }
-
-    .keys, .topLine {
-      overflow: hidden;
-    }
-
-    .keys span, .topLine span.clear {
-      float: left;
-      position: relative;
-      top: 0;
-      cursor: pointer;
-      width: 66px;
-      height: 36px;
-      background: white;
-      border-radius: 3px;
-      margin: 0 7px 11px 0;
-      color: grey;
-      line-height: 36px;
-      text-align: center;
-      user-select: none;
-    }
-
-    .keys span.operation {
-      background: #f2eb6a;
-      /*margin-right: 2px;*/
-      color:grey;
-      font-style: bold;
-    }
-
-    .keys span.eval {
-      background: #37d349;
-      color: white;
-      font-style: bold;
-    }
-
-    .topLine span.clear {
-      background: red;
-      color: white;
-    }
-
-    .keys span:hover , .keys span.eval:hover ,
-    .topLine span.clear:hover  {
-      background: #a8a79f;
-      color: white;
-    }
-  </style>
-
-
-
   <body>
-    <h1 id="title" onclick="changeText()">JavaScript Exercise 3 - Calculator</h1>
+    <h1 id="title">JavaScript Exercise 3 - Calculator</h1>
 
     <div id="frame">
       <!-- Screen and clear key -->
@@ -122,81 +41,6 @@
         
       </div>
     </div>
-
-  <script type="text/javascript">
-    // creating variables and list of operations
-    var operations = ['+', '-', '*', '/'];
-    var decimalAdded = false;
-    var keys = document.querySelectorAll('#frame span');
-
-    // Printing keys and operations on screen
-    for(var i = 0; i < keys.length; i++) {
-      keys[i].onclick = function(e) {
-        var input = document.querySelector('.screen');
-        var inputValue = input.innerHTML;
-        var buttonValue = this.innerHTML;
-
-        // Erasing screen when Clr is pressed
-        if(buttonValue == 'Clr') {
-          input.innerHTML = '';
-          decimalAdded = false;
-        }
-        
-        // Calculating when eval is pressed
-        else if(buttonValue == '=') {
-          var eq = inputValue;
-          var lastCharacter = eq[eq.length - 1];
-          
-          
-          // Removing if the last character is a decimal or operation
-          if(operations.indexOf(lastCharacter) > -1 || lastCharacter == '.')
-            eq = eq.replace(/.$/, '');
-          
-          if(eq)
-            input.innerHTML = eval(eq);
-            
-          decimalAdded = false;
-        }
-        
-        // Restricting the input of two operations consecitively
-        else if(operations.indexOf(buttonValue) > -1) {
-          
-          // checking to see the last character when operation is selected
-          var lastCharacter = inputValue[inputValue.length - 1];
-          
-          // add the operation if the last character is not an operation
-          if(inputValue != '' && operations.indexOf(lastCharacter) == -1) 
-            input.innerHTML += buttonValue;
-          
-          // Allowing minus when string is empty
-          else if(inputValue == '' && buttonValue == '-') 
-            input.innerHTML += buttonValue;
-          
-          // Replacing last operation with a new operation
-          if(operations.indexOf(lastCharacter) > -1 && inputValue.length > 1) {
-            input.innerHTML = inputValue.replace(/.$/, buttonValue);
-          }
-          
-          decimalAdded =false;
-        }
-        
-        // limiting the input of only one decimal
-        else if(buttonValue == '.') {
-          if(!decimalAdded) {
-            input.innerHTML += buttonValue;
-            decimalAdded = true;
-          }
-        }
-        
-        // displaying if another key is pressed
-        else {
-          input.innerHTML += buttonValue;
-        }
-        
-        // preventing page jumps
-        e.preventDefault();
-      } 
-    }
-</script>
+    <script type="text/javascript" src="js-page3.js"></script>
   </body>
 </html>
