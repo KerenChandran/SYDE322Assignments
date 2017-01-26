@@ -4,6 +4,10 @@ body {
   font-family:Helvetica;
 }
 
+canvas {
+  display:inline;
+}
+
 #title {
   color:white;
 }
@@ -64,6 +68,12 @@ body {
   background: #37d349;
   color: white;
   font-style: bold;
+}
+
+.graph {
+  background:orange !important;
+  width:285px !important;
+  color:white !important;
 }
 
 .topLine span.clear {

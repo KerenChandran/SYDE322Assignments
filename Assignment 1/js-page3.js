@@ -4,6 +4,7 @@ var operations = ['+', '-', '*', '/'];
 var decimalAdded = false;
 var keys = document.querySelectorAll('#frame span');
 
+
 // Printing keys and operations on screen
 for(var i = 0; i < keys.length; i++) {
   keys[i].onclick = function(e) {
