@@ -88,7 +88,7 @@ function displayShows() {
     var table = $('table');
     table.append('<tr>' +
       '<td>' + show.name + '</td>' +
-      '<td>' + show.url + '</td>' +
+      '<td><a href="' + show.url + '">'+ show.url +'</a></td>' +
       '<td>' + show.summary + '</td>' +
       '<td>' + castText + '</td>' +
       '<td>' + randomizeShowClip(show.name) + '</td>' +
