@@ -11,28 +11,23 @@
           element.innerHTML = "My SYDE 322 test script";
         }
       }
-
       function changeStyle1() {
         // change text style to these specific properties
         // var element = document.getElementById("test");
         // element.style.fontSize = "60px";
         // element.style.fontFamily = "cursive";
         // element.style.color = "red";
-
         document.getElementsByTagName("body")[0].className = "style1"
         document.getElementById("test").innerText = "The good old days..."
       }
-
       function changeStyle2() {
         document.getElementsByTagName("body")[0].className = "style2"
         document.getElementById("test").innerText = "Under the sea! Under the sea!"
       }
-
       function changeStyle3() {
         document.getElementsByTagName("body")[0].className = "style3"
         document.getElementById("test").innerText = "It's dangerous to go alone! Take this."
       }
-
       function writeText() { // generate a new page
         document.open("text/html", "replace");
         document.write('<!DOCTYPE html><html><body>');

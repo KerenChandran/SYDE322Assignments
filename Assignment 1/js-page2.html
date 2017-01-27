@@ -3,42 +3,58 @@
   <header>
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
     <script>
-      function changeText() { // this gets executed when called
-        var element = document.getElementById("test");
-        if (element.innerHTML.match("SYDE 322")) {
-          element.innerHTML = "Hello World!";
-        } else {
-          element.innerHTML = "My SYDE 322 test script";
-        }
-      }
-
-      function changeStyle1() {
-        // change text style to these specific properties
-        var element = document.getElementById("test");
-        element.style.fontSize = "60px";
-        element.style.fontFamily = "cursive";
-        element.style.color = "red";
-      }
-
-      function writeText() { // generate a new page
-        document.open();
+      
+      function chandler() {
+        document.open("text/html", "replace");
         document.write('<!DOCTYPE html><html><body>');
         document.write('<h2 id="test2" style="color:blue"> \
-          My first fully-generated HTML page!</h2>');
+          My Favourite Chandler Moments!</h2>');
+        document.write('<iframe width="560" height="315" src="https://www.youtube.com/embed/WWJPooLjasA?autoplay=1" frameborder="0" allowfullscreen></iframe>');
         document.write('<p><input type="button" \
           value="Go Back" onclick="location.reload()"></p>');
         document.write('</body></html>');
         document.close();
       }
+
+      function phoebe() {
+        document.open("text/html", "replace");
+        document.write('<!DOCTYPE html><html><body>');
+        document.write('<h2 id="test2" style="color:blue"> \
+          My Favourite Phoebe Moments!</h2>');
+        document.write('<iframe width="560" height="315" src="https://www.youtube.com/embed/YozszzDvY0k?autoplay=1" frameborder="0" allowfullscreen></iframe>');
+        document.write('<p><input type="button" \
+          value="Go Back" onclick="location.reload()"></p>');
+        document.write('</body></html>');
+        document.close();
+      }
+
+      function joey() {
+        document.open("text/html", "replace");
+        document.write('<!DOCTYPE html><html><body>');
+        document.write('<h2 id="test2" style="color:blue"> \
+          My Favourite Joey Moments!</h2>');
+        document.write('<iframe width="560" height="315" src="https://www.youtube.com/embed/FuymvEZ1pkU?autoplay=1" frameborder="0" allowfullscreen></iframe>');
+        document.write('<p><input type="button" \
+          value="Go Back" onclick="location.reload()"></p>');
+        document.write('</body></html>');
+        document.close();
+      }
+
+      function randomVideo() {
+        var videos = ["https://www.youtube.com/watch?v=Uq_ePJ3taLc", "https://www.youtube.com/watch?v=ZBk6PyQiUmw", "https://www.youtube.com/watch?v=HVhli9AtJZ0", "https://www.youtube.com/watch?v=b2NLR7axPuE", "https://www.youtube.com/watch?v=TU4JpTCa0QQ"]
+        var randomVideo = videos[Math.floor(Math.random() * videos.length)]
+        window.open(randomVideo,"_blank")
+      }
+
     </script>
   </header>
   <body>
-    <h1 id="test" onclick="changeText()">My SYDE 322 test script</h1>
-    <script>
-      // the following gets executed immediately
-      document.getElementById("test").innerHTML = "Hello World!";
-    </script>
-    <p><input type="button" value="Style1" onclick="changeStyle1()"></p>
-    <p><input type="button" value="Generate New Page" onclick="writeText()"></p>
+    <h1 id="test" onclick="changeText()">JavaScript Exercise 2</h1>
+    <p>
+      <input type="button" value="Best of Chandler" onclick="chandler()">
+      <input type="button" value="Best of Phoebe" onclick="phoebe()">
+      <input type="button" value="Best of Joey" onclick="joey()">
+      <input type="button" value="Random Video" onclick="randomVideo()">
+    </p>
   </body>
 </html>

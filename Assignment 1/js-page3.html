@@ -1,44 +1,62 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>js-graphy - Visualize, Test, Tweak and Play with JavaScript Math</title>
+    <link rel="stylesheet" type="text/css" href="graphy.css" />
+    <script type="text/javascript" src="http://ajaxorg.github.io/ace-builds/src-noconflict/ace.js"  charset="utf-8"></script>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="calc.js"></script>
+    <script type="text/javascript" src="jsgcalc.js"></script>
+    <script type="text/javascript" src="graphy.js"></script>
+    <script type="text/javascript" src="jquery.splitter.js"></script>
+
+  </head>
   <header>
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-    <script>
-      function changeText() { // this gets executed when called
-        var element = document.getElementById("test");
-        if (element.innerHTML.match("SYDE 322")) {
-          element.innerHTML = "Hello World!";
-        } else {
-          element.innerHTML = "My SYDE 322 test script";
-        }
-      }
 
-      function changeStyle1() {
-        // change text style to these specific properties
-        var element = document.getElementById("test");
-        element.style.fontSize = "60px";
-        element.style.fontFamily = "cursive";
-        element.style.color = "red";
-      }
-
-      function writeText() { // generate a new page
-        document.open();
-        document.write('<!DOCTYPE html><html><body>');
-        document.write('<h2 id="test2" style="color:blue"> \
-          My first fully-generated HTML page!</h2>');
-        document.write('<p><input type="button" \
-          value="Go Back" onclick="location.reload()"></p>');
-        document.write('</body></html>');
-        document.close();
-      }
-    </script>
+    <meta charset=utf-8 />
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/mathjs/0.15.0/math.min.js"></script>
   </header>
+
   <body>
-    <h1 id="test" onclick="changeText()">My SYDE 322 test script</h1>
-    <script>
-      // the following gets executed immediately
-      document.getElementById("test").innerHTML = "Hello World!";
-    </script>
-    <p><input type="button" value="Style1" onclick="changeStyle1()"></p>
-    <p><input type="button" value="Generate New Page" onclick="writeText()"></p>
+    <h1 id="title">JavaScript Exercise 3 - Calculator</h1>
+
+    <div id="frame">
+      <!-- Screen and clear key -->
+      <div class="topLine">
+        <span class="clear">Clr</span>
+        <div class="screen"></div>
+      </div>
+      
+      <div class="keys">
+        <!-- operations and other keys -->
+        <!-- Row 1 -->
+        <span class="operation">+</span>
+        <span>7</span>
+        <span>8</span>
+        <span>9</span>
+        <!-- Row 2 -->
+        <span class="operation">-</span>
+        <span>4</span>
+        <span>5</span>
+        <span>6</span>
+        <!-- Row 3 -->
+        <span class="operation">/</span>
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <!-- Row 4 -->
+        <span class="operation">*</span>
+        <span class="eval">=</span>
+        <span>0</span>
+        <span>.</span>
+        
+      </div>
+      
+
+    </div>
+    <script type="text/javascript" src="js-page3.js"></script>
+    <script type="text/javascript" src="canvas.js"></script>
   </body>
 </html>
