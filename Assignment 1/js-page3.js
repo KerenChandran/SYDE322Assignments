@@ -67,7 +67,8 @@ for(var i = 0; i < keys.length; i++) {
     input.innerHTML += buttonValue;
   }
 
-  // preventing page jumps
+  // prevents going to other urls 
+  // If this method is called, the default action of the event will not be triggered.
   e.preventDefault();
   }
 }
