@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>js-graphy - Visualize, Test, Tweak and Play with JavaScript Math</title>
+    <title>JS-Calculator</title>
     <link rel="stylesheet" type="text/css" href="graphy.css" />
     <script type="text/javascript" src="http://ajaxorg.github.io/ace-builds/src-noconflict/ace.js"  charset="utf-8"></script>
     <script type="text/javascript" src="jquery.min.js"></script>
@@ -21,8 +21,10 @@
 
   <body>
     <h1 id="title">JavaScript Exercise 3 - Calculator</h1>
-
-    <div id="frame">
+    
+    <div id="frame" style="
+    margin-top: 10px;margin-bottom: 50px;
+">
       <!-- Screen and clear key -->
       <div class="topLine">
         <span class="clear">Clr</span>
@@ -31,32 +33,47 @@
       
       <div class="keys">
         <!-- operations and other keys -->
+        
+        <span class="func">sin</span>
+        <span class="func">cos</span>
+        <span class="func">tan</span>
+        <span class="func">log</span>
+        
+        <span class="func">e</span>
+        <span class="func">x<sup>y</sup></span>
+        <span class="func">&radic;</span>
+        <span class="func">ln</span>
+
         <!-- Row 1 -->
-        <span class="operation">+</span>
         <span>7</span>
         <span>8</span>
         <span>9</span>
+        <span class="operation">+</span>
         <!-- Row 2 -->
-        <span class="operation">-</span>
         <span>4</span>
         <span>5</span>
         <span>6</span>
+        <span class="operation">-</span>
         <!-- Row 3 -->
-        <span class="operation">/</span>
         <span>1</span>
         <span>2</span>
         <span>3</span>
+        <span class="operation">/</span>
         <!-- Row 4 -->
-        <span class="operation">*</span>
-        <span class="eval">=</span>
         <span>0</span>
         <span>.</span>
+        <span class="eval">=</span>
+        <span class="operation">*</span>
+
+        <span style="width:285px; background-color:orange; color:white">Graph</span>
         
       </div>
+        <div class="graph">
+          <canvas width="200" height="200" id="myCanvas"></canvas>
+        </div>
+      </div>
       
-
     </div>
     <script type="text/javascript" src="js-page3.js"></script>
-    <script type="text/javascript" src="canvas.js"></script>
   </body>
 </html>
