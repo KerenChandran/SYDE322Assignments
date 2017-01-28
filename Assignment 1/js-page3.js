@@ -78,6 +78,7 @@ for(var i = 0; i < keys.length; i++) {
 function graph() {
 
   var i = document.getElementById("userInput").value;
+  i = '-' + i;
 
   var canvas = document.getElementById('myCanvas'),
       c = canvas.getContext('2d'),
@@ -92,10 +93,11 @@ function graph() {
       yMax = 10,
       
       math = mathjs(),
-      expr = -i,
+      expr = i,
       scope = { x: 0 },
       tree = math.parse(expr, scope);
 
+      c.clearRect(0, 0, canvas.width, canvas.height);
   drawCurve();
 
   function drawCurve(){
