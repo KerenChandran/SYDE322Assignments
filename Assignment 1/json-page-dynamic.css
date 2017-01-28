@@ -1,0 +1,22 @@
+body {
+  background-color: #D7DADB;
+}
+
+.music-option, .movies-option, .jobs-option {
+  padding: 50px;
+}
+
+.music-option {
+  background-color: #FC4349;
+  color: #FFFFFF;
+}
+
+.movies-option {
+  background-color: #2C3E50;
+  color: #FFFFFF;
+}
+
+.jobs-option {
+  background-color: #6DBCDB;
+  color: #FFFFFF;
+}
