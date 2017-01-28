@@ -8,8 +8,22 @@ canvas {
   display:inline;
 }
 
+.func {
+  background-color: grey !important;
+  color:white !important;
+}
+
 #title {
   color:white;
+}
+
+.graphInput {
+  text-align: center;
+}
+
+.graph {
+  text-align: center;
+  background-color: white !important;
 }
 
 #frame {
@@ -68,12 +82,6 @@ canvas {
   background: #37d349;
   color: white;
   font-style: bold;
-}
-
-.graph {
-  background:orange !important;
-  width:285px !important;
-  color:white !important;
 }
 
 .topLine span.clear {
