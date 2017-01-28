@@ -3,15 +3,12 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>JS-Calculator</title>
-    <link rel="stylesheet" type="text/css" href="graphy.css" />
     <script type="text/javascript" src="http://ajaxorg.github.io/ace-builds/src-noconflict/ace.js"  charset="utf-8"></script>
-    <script type="text/javascript" src="jquery.min.js"></script>
-    <script type="text/javascript" src="calc.js"></script>
-    <script type="text/javascript" src="jsgcalc.js"></script>
-    <script type="text/javascript" src="graphy.js"></script>
-    <script type="text/javascript" src="jquery.splitter.js"></script>
-
+    <meta charset=utf-8 />
+    <title>Graphing Calculator</title>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/mathjs/0.15.0/math.min.js"></script>
   </head>
+
   <header>
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
     <link type="text/css" rel="stylesheet" href="js-page3.css" /> 
@@ -21,7 +18,7 @@
 
   <body>
     <h1 id="title">JavaScript Exercise 3 - Calculator</h1>
-    
+    <h2 id="title" style="text-align:center">Simple Calculator</h2> 
     <div id="frame" style="
     margin-top: 10px;margin-bottom: 50px;
 ">
@@ -34,7 +31,7 @@
       <div class="keys">
         <!-- operations and other keys -->
         
-        <span class="func">sin</span>
+<!--         <span class="func">sin</span>
         <span class="func">cos</span>
         <span class="func">tan</span>
         <span class="func">log</span>
@@ -42,8 +39,8 @@
         <span class="func">e</span>
         <span class="func">x<sup>y</sup></span>
         <span class="func">&radic;</span>
-        <span class="func">ln</span>
-
+        <span class="func">ln</span> -->
+         
         <!-- Row 1 -->
         <span>7</span>
         <span>8</span>
@@ -65,15 +62,23 @@
         <span class="eval">=</span>
         <span class="operation">*</span>
 
-        <span style="width:285px; background-color:orange; color:white">Graph</span>
         
+      </div> 
+            
       </div>
-        <div class="graph">
-          <canvas width="200" height="200" id="myCanvas"></canvas>
-        </div>
-      </div>
-      
+
+        <h2 id="title" style="text-align:center">Graphing Calculator</h2> 
+  <div class="graphInput">
+
+    <input type="text" id="userInput" placeholder="Please enter function" />
+    <input type="submit" onclick="graph()">Graph</button><br><br>
+
+    <div class="graph">
+     <canvas width="200" height="200" id="myCanvas"></canvas>
     </div>
+  </div>
+    </div> 
     <script type="text/javascript" src="js-page3.js"></script>
+
   </body>
 </html>

@@ -17,9 +17,13 @@ canvas {
   color:white;
 }
 
+.graphInput {
+  text-align: center;
+}
+
 .graph {
   text-align: center;
-  background-color: transparent !important;
+  background-color: white !important;
 }
 
 #frame {
