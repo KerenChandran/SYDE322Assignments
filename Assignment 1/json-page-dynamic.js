@@ -167,7 +167,7 @@ function renderMovies() {
     <form id="movieForm"> \
       <div class="form-group"> \
         <label for="videoTitle">Title</label> \
-        <input class="form-control" id="videoTitle" placeholder="Enter title of your video"> \
+        <input class="form-control" id="videoTitle" placeholder="Enter title of your Movie/Show"> \
       </div> \
       <div class="text-center"> \
         <div class="radio-inline"> \
