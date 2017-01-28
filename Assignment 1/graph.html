@@ -1,6 +1,8 @@
 <html>
 <head>
-    <script type="text/javascript" src="lib/d3.js"></script>
+    <!--- Added reference to d3 library -->
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <!--- Added reference to d3 library -->
     <script type="text/javascript" src="lib/math.js"></script>
     <style type="text/css">
         svg .axis path, svg .axis line {
@@ -15,6 +17,11 @@
         }
     </style>
     <script type="text/javascript">
+        /*
+          Added Initialization for mathjs()
+         */
+        var math = mathjs()
+
         function range_without_zero(low, high, step) {
             var arr = [idx], idx = low;
             while (idx <= high) {
